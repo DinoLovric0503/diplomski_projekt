@@ -1,0 +1,21 @@
+#UPUTE ZA POKRETANJE ORB_SLAM3 
+
+~/CrazySim/crazyflie-firmware# bash tools/crazyflie-simulation/simulator_files/gazebo/launch/sitl_singleagent.sh -m crazyflie -x 0 -y -2   // spawn drona na lokaciju (0, -2) 
+
+ros2 launch crazyflie launch.py backend:=cflib // omogućavanje upravljanjem drona 
+
+ros2 run ros_gz_bridge parameter_bridge /cf_0/camera@sensor_msgs/msg/Image@gz.msgs.Image // bridgamo topic iz Gazeba u ROS2 
+
+ros2 run topic_tools relay /cf_0/camera /camera/rgb/image_color // prilagodba topica za korištenje u ORB SLAM 3 
+
+~/ros2_ws/src/crazyswarm2/crazyflie/scripts# python3 vel_mux.py // skripta za upravljanje dronom 
+
+ros2 launch orbslam3_ros2 orbslam3_ros2.launch.py camera_type:=mono visualize:=true // pokretanje ORB_SLAM3 
+
+
+AJDEEEEEEEEE :)) RADIII
+
+
+
+
+
