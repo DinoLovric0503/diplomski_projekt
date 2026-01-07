@@ -18,6 +18,9 @@ AJDEEEEEEEEE :)) RADIII
 
 https://github.com/sagar16812/orbslam3_ros2  // link na github repozitorij 
 
+evo_traj tum dji_trajectory.txt paste_converted.tum output.tum --ref dji_trajectory.txt  -as -v --plot
+
+
 
 
 
