@@ -10,7 +10,7 @@ ros2 run topic_tools relay /cf_0/camera /camera/rgb/image_color // prilagodba to
 
 ~/ros2_ws/src/crazyswarm2/crazyflie/scripts# python3 vel_mux.py // skripta za upravljanje dronom 
 
-ros2 launch orbslam3_ros2 orbslam3_ros2.launch.py camera_type:=mono visualize:=true // pokretanje ORB_SLAM3 
+ros2 launch orbslam3_ros2 orbslam3_ros2.launch.py camera_type:=mono visualize:=true record_bag:=true // pokretanje ORB_SLAM3 
 
 
 AJDEEEEEEEEE :)) RADIII
